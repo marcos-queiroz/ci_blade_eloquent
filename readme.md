@@ -40,7 +40,7 @@ Já no diretório instale as dependências com os comandos:
 
     composer require xiaoler/blade
 
-    composer illuminate/database
+    composer require illuminate/database
 
 Pronto o projeto já está criado e com suas dependências instaladas.
 
