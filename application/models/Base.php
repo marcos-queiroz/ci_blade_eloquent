@@ -9,6 +9,12 @@ class Usuario extends Eloquent {
 
     public $timestamps = false;
 
+    // relacionamento entre usuario e cliente
+    function clientes ()
+    {
+        return $this->hasMany('Cliente', 'idusuario', 'id');
+    }
+
 }
 
 class Cidade extends Eloquent {
@@ -28,13 +34,15 @@ class Cliente extends Eloquent {
     public $timestamps = false;
 
     // relacionamento entre cliente e usuario
-    function usuario(){
+    function usuario()
+    {
         return $this->belongsTo('Usuario', 'idusuario', 'id');
     }
 
     // relacionamento entre cliente e cidade
-    function cidade(){
+    function cidade()
+    {
         return $this->belongsTo('Cidade', 'idcidade', 'id');
     }
-    
+
 }

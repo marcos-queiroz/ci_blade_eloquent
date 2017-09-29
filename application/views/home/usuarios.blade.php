@@ -13,19 +13,17 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Cliente</th>
-                        <th>Cidade</th>
+                        <th>Usuário</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($clientes as $cliente)
+                    @foreach ($usuarios as $usuario)
                     <tr>
-                        <td><a href="{{base_url('/cliente/').$cliente->id}}">{{$cliente->id}}</a></td>
-                        <td>{{$cliente->nome}}</td>
-                        <td>{{$cliente->cidade->nome}}</td>
+                        <td>{{$usuario->id}}</td>
+                        <td>{{$usuario->nome}}</td>
                         <td class="text-center">
-                            <a class="btn btn-sm btn-primary" href="{{base_url('/cliente/').$cliente->id}}">
+                            <a class="btn btn-sm btn-primary" href="{{base_url('/usuario/').$usuario->id}}">
                                 <i class="material-icons">find_in_page</i>
                             </a>
                         </td>
